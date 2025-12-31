@@ -140,7 +140,7 @@ export default async function handler(req, res) {
               <div class="highlight">
                 <strong>📅 Event Date:</strong> March 6, 2026 (Friday)<br>
                 <strong>⏰ Time:</strong> 06:30 PM - 09:30 PM<br>
-                <strong>📍 Venue:</strong> Northplace Centre, 27 Meridian Drive, Umlhanga, Durban, KwaZulu-Natal
+                <strong>📍 Venue:</strong> Northplace Centre, 27 Meridian Drive, Umhlanga, Durban, KwaZulu-Natal
               </div>
 
               <div class="details">
