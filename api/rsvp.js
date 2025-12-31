@@ -158,7 +158,6 @@ export default async function handler(req, res) {
                 <li>Meet our founders, Avathar Soni Naidoo and Ashendran Naidoo</li>
                 <li>Discover how Apex can support your business transformation</li>
                 <li>Explore strategic partnership opportunities</li>
-                <li>Enjoy quality refreshments and professional networking</li>
               </ul>
 
               <h3 style="color: #0f172a;">What's Next?</h3>
