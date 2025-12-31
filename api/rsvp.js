@@ -138,9 +138,9 @@ export default async function handler(req, res) {
               <p>We're delighted to confirm your registration for the <strong>Apex Advisory Solutions Launch & Networking Event</strong>.</p>
               
               <div class="highlight">
-                <strong>📅 Event Date:</strong> March 6, 2026 (Thursday)<br>
-                <strong>⏰ Time:</strong> 08:00 AM - 05:00 PM<br>
-                <strong>📍 Venue:</strong> To be announced (Durban, KwaZulu-Natal)
+                <strong>📅 Event Date:</strong> March 6, 2026 (Friday)<br>
+                <strong>⏰ Time:</strong> 06:30 PM - 09:30 PM<br>
+                <strong>📍 Venue:</strong> Northplace Centre, 27 Meridian Drive, Umlhanga, Durban, KwaZulu-Natal
               </div>
 
               <div class="details">
@@ -164,8 +164,6 @@ export default async function handler(req, res) {
               <h3 style="color: #0f172a;">What's Next?</h3>
               <ul>
                 <li>Keep this email for your records</li>
-                <li>We'll send you the exact venue details closer to the date</li>
-                <li>Expect an event agenda and parking information soon</li>
                 <li>Add the event to your calendar</li>
                 <li>Feel free to bring business cards for networking</li>
               </ul>
