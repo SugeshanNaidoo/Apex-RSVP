@@ -135,7 +135,8 @@ export default async function handler(req, res) {
             </div>
             <div class="content">
               <h2>Thank You, ${name}!</h2>
-              <p>We're delighted to confirm your registration for the <strong>Apex Advisory Solutions Launch & Networking Event</strong>.</p>
+              <p>This email confirms receipt of your registration.<br>
+              Our team will be finalising the guest list, and you will receive a final attendance confirmation email closer to mid-February for the <strong>Apex Advisory Solutions Launch & Networking Event</strong>.</p>
               
               <div class="highlight">
                 <strong>📅 Event Date:</strong> March 6, 2026 (Friday)<br>
