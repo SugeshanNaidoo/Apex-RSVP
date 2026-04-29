@@ -678,6 +678,178 @@
                 height: 450px;
             }
         }
+
+        /* ── First Event Recap Section ── */
+        .first-event {
+            padding: 6rem 2rem;
+            background: var(--primary);
+            color: white;
+            overflow: hidden;
+        }
+
+        .first-event .section-header h2 {
+            color: white;
+        }
+
+        .first-event .section-header p {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .first-event-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .first-event-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .first-event-text .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+
+        .first-event-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            line-height: 1.2;
+            color: white;
+        }
+
+        .first-event-text p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .first-event-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .event-stat {
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 12px;
+            padding: 1.25rem 1rem;
+            text-align: center;
+        }
+
+        .event-stat .stat-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 0.4rem;
+        }
+
+        .event-stat .stat-label {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 0.03em;
+        }
+
+        .first-event-video {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 14px;
+        }
+
+        .video-caption {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: rgba(255,255,255,0.55);
+            font-size: 0.875rem;
+        }
+
+        .video-caption i {
+            color: var(--accent);
+        }
+
+        /* First event responsive */
+        @media (max-width: 1024px) {
+            .first-event-layout {
+                gap: 3rem;
+            }
+
+            .first-event-text h3 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .first-event {
+                padding: 4rem 1.5rem;
+            }
+
+            .first-event-layout {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            /* On mobile: video first, text below */
+            .first-event-video {
+                order: -1;
+            }
+
+            .first-event-text h3 {
+                font-size: 1.75rem;
+            }
+
+            .first-event-stats {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .first-event-text h3 {
+                font-size: 1.5rem;
+            }
+
+            .first-event-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .event-stat:last-child {
+                grid-column: span 2;
+            }
+        }
     </style>
 </head>
 <body>
@@ -692,6 +864,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#details">Event Details</a></li>
+                <li><a href="#first-event">Our First Event</a></li>
                 <li><a href="#rsvp" class="cta-btn">RSVP Now</a></li>
             </ul>
             <div class="mobile-toggle" id="mobileToggle">
@@ -707,7 +880,7 @@
         <div class="hero-content">
             <div class="event-date-badge">
                 <i class="far fa-calendar-alt"></i>
-                <span>March 6, 2026</span>
+                <span>July 11, 2026</span>
             </div>
             <h1>Industry Leaders <span class="accent-text">Summit 2026</span></h1>
             <p>Join us for an exclusive gathering of business leaders, innovators, and industry experts. Network, learn, and shape the future of business in South Africa.</p>
@@ -770,7 +943,7 @@
                 <div class="detail-card">
                     <i class="far fa-calendar-alt"></i>
                     <h3>Date</h3>
-                    <p>March 6, 2026<br>Friday</p>
+                    <p>July 11, 2026<br>Saturday</p>
                 </div>
 
                 <div class="detail-card">
@@ -782,13 +955,78 @@
                 <div class="detail-card">
                     <i class="fas fa-map-marker-alt"></i>
                     <h3>Venue</h3>
-                    <p>Northplace Centre, 27 Meridian Drive, Umhlanga, Durban, KwaZulu-Natal<br>South Africa</p>
+                    <p>Rivers Church Sandton,Cnr South & Middle Roads, Morningside, Sandton, 2196<br>South Africa</p>
                 </div>
 
                 <div class="detail-card">
                     <i class="fas fa-users"></i>
                     <h3>Audience</h3>
                     <p>Business Leaders & Executives<br>Limited Seats Available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- First Event Recap Section -->
+    <section id="first-event" class="first-event">
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <div class="section-header" style="margin-bottom: 3.5rem;">
+                <h2>Our First Event</h2>
+                <p>A look back at the evening that started it all — Durban, South Africa</p>
+            </div>
+
+            <div class="first-event-layout">
+                <!-- Text side -->
+                <div class="first-event-text">
+                    <span class="eyebrow">
+                        <i class="fas fa-star"></i> Launch Night Recap
+                    </span>
+                    <h3>An Unforgettable Evening in the Heart of Durban</h3>
+                    <p>
+                        On the evening of <strong style="color: var(--accent);">March 6, 2026</strong>, Apex Advisory Solutions officially opened its doors at Northplace Centre in Umhlanga, Durban — and the response was extraordinary. Business leaders, entrepreneurs, and professionals from across KwaZulu-Natal gathered for a night of conversation, connection, and vision.
+                    </p>
+                    <p>
+                        The event marked more than just a company launch. It was a statement of intent — that South Africa's business landscape deserves a consultancy built on integrity, expertise, and a genuine commitment to transformation. Founders <strong style="color: white;">Avathar Soni Naidoo</strong> and <strong style="color: white;">Ashendran Naidoo</strong> welcomed every guest personally, setting the tone for the relationship-first culture at the core of Apex.
+                    </p>
+                    <p>
+                        From the opening address to the final handshake of the evening, the energy in the room was electric. Guests shared stories, forged new partnerships, and left inspired by the possibilities that lie ahead for business in South Africa.
+                    </p>
+
+                    <div class="first-event-stats">
+                        <div class="event-stat">
+                            <div class="stat-number">70+</div>
+                            <div class="stat-label">Guests Attended</div>
+                        </div>
+                        <div class="event-stat">
+                            <div class="stat-number">3hrs</div>
+                            <div class="stat-label">Of Networking</div>
+                        </div>
+                        <div class="event-stat">
+                            <div class="stat-number">1</div>
+                            <div class="stat-label">Historic Night</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video side -->
+                <div class="first-event-video">
+                    <div class="video-wrapper">
+                        <!--
+                            REPLACE the src below with your actual video embed URL.
+                            YouTube example:  https://www.youtube.com/embed/YOUR_VIDEO_ID
+                            Vimeo example:    https://player.vimeo.com/video/YOUR_VIDEO_ID
+                        -->
+                        <iframe
+                            src="imgs/launch.mp4"
+                            title="Apex Advisory Solutions — Launch Event Durban 2026"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="video-caption">
+                        <i class="fas fa-play-circle"></i>
+                        Highlights from the Apex Advisory Solutions Launch &amp; Networking Evening, Umhlanga, Durban
+                    </p>
                 </div>
             </div>
         </div>
@@ -862,7 +1100,7 @@
                     </h3>
                     <div class="map-frame">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.9788507271974!2d31.059876875331906!3d-29.720371875088368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef705a1f34d618f%3A0xd206d0d85e8b3e4!2sNorthplace%20Centre!5e0!3m2!1sen!2sza!4v1767180610034!5m2!1sen!2sza" 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.291774854003!2d28.061682575194666!3d-26.089392577147468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9572e1ddd85587%3A0xd71ecb636a027b49!2sRivers%20Church%20Sandton!5e0!3m2!1sen!2sza!4v1777452856326!5m2!1sen!2sza"
                             width="100%" 
                             height="100%" 
                             style="border:0; border-radius: 12px;" 
@@ -873,8 +1111,8 @@
                     </div>
                     <div class="venue-details">
                         <p style="color: var(--text-light); margin: 1rem 0 0 0; line-height: 1.6;">
-                            <strong style="color: var(--primary);">Venue:</strong> Northplace Centre<br>
-                            <strong style="color: var(--primary);">Address:</strong> 27 Meridian Drive, Umhlanga, Durban, KwaZulu-Natal<br>
+                            <strong style="color: var(--primary);">Venue:</strong> Rivers Church Sandton<br>
+                            <strong style="color: var(--primary);">Address:</strong> Cnr South & Middle Roads, Morningside, Sandton, 2196<br>
                             <strong style="color: var(--primary);">Parking:</strong> Available on-site
                         </p>
                     </div>
@@ -912,7 +1150,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Apex Advisory Solutions (Pty) Ltd. All rights reserved. | Designed By Alba Designs</p>
+            <p>&copy; 2026 Apex Advisory Solutions (Pty) Ltd. All rights reserved. | Designed By Alba Designs</p>
         </div>
     </footer>
 
